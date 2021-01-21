@@ -993,6 +993,15 @@ constants-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
+contentstack@^3.12.0:
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/contentstack/-/contentstack-3.12.0.tgz#d883bb8be5dbf3cc66cf3bc327eeccdaf2eefac7"
+  integrity sha512-sexciZ8QrEYFJpcKE4QlRCkzD/xQbeF4kP4BQcpTD0r0bOHljwbv5CcMH7LwlmbY7YXO23q6dXUmtlWy7p8Fvg==
+  dependencies:
+    es6-promise "4.1.1"
+    localStorage "1.0.3"
+    node-fetch "^2.6.1"
+
 convert-source-map@1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
@@ -1389,6 +1398,11 @@ es6-iterator@2.0.3, es6-iterator@~2.0.3:
     d "1"
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
+
+es6-promise@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.1.1.tgz#8811e90915d9a0dba36274f0b242dbda78f9c92a"
+  integrity sha512-OaU1hHjgJf+b0NzsxCg7NdIYERD6Hy/PEmFLTjw+b65scuisG3Kt4QoTvJ66BBkPZ581gr0kpoVzKnxniM8nng==
 
 es6-symbol@^3.1.1, es6-symbol@~3.1.3:
   version "3.1.3"
@@ -2155,6 +2169,11 @@ loader-utils@^1.2.3:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
+localStorage@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/localStorage/-/localStorage-1.0.3.tgz#e6b89a57bb760a156a38cc87e0f2550f6ed413d8"
+  integrity sha1-5riaV7t2ChVqOMyH4PJVD27UE9g=
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
@@ -2490,7 +2509,7 @@ node-addon-api@^3.0.2:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.1.0.tgz#98b21931557466c6729e51cb77cd39c965f42239"
   integrity sha512-flmrDNB06LIl5lywUz7YlNGZH/5p0M7W28k8hzd9Lshtdh1wshD2Y+U4h9LD6KObOy1f+fEVdgprPrEymjM5uw==
 
-node-fetch@2.6.1:
+node-fetch@2.6.1, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==

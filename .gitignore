@@ -16,6 +16,7 @@
 /build
 
 # misc
+csids.txt
 .DS_Store
 *.pem
 
