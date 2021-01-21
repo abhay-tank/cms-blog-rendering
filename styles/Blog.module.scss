@@ -1,0 +1,32 @@
+@import "./theme";
+.blog-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 2rem;
+	h1 {
+		font-size: 8vw;
+		font-weight: normal;
+		font-family: "Dancing Script", cursive;
+		margin: 3rem 0;
+	}
+	p {
+		margin: 3rem 0;
+		font-size: 1.5rem;
+		width: 90%;
+		text-align: justify;
+	}
+	.blogImage {
+		box-shadow: 5px 5px 20px $transparent-black;
+	}
+	.relatedLink {
+		margin: 1rem;
+		font-family: "Megrim", cursive;
+		cursor: pointer;
+		background-color: $transparent-black;
+		font-size: 1.5rem;
+	}
+}

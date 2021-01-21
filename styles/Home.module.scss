@@ -1,71 +1,30 @@
 @import "./theme";
-@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
-.nav-container,
-.footer {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background-color: rgba($color: #ffffff, $alpha: 0.9);
-}
-
-.nav-container {
-	// border-bottom: 2px solid $transparent-black;
-	.nav-link {
-		cursor: pointer;
-	}
-}
-
-.footer {
-	padding: 1rem;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-top: 2px solid $transparent-black;
-	h1 {
-		font-family: "Megrim", cursive;
-		font-weight: normal;
-	}
-	.avatarImage {
-		border-radius: 50%;
-	}
-	.social-links {
-		width: 50%;
-		display: inherit;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-evenly;
-		padding: 1rem 2rem;
-		.social-link {
-			margin: 1rem;
-			padding: 1rem;
-		}
-	}
-}
-
-.container {
+.grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	grid-template-rows: auto;
-	background: url("/bg2.svg");
+	background-image: url("/bg2.svg");
+	background-color: rgba($color: #ffffff, $alpha: 1);
+	background-blend-mode: multiply;
 	background-size: cover;
 	background-attachment: fixed;
-	background-blend-mode: multiply;
+	padding: 3rem;
 }
 
 .blog-card {
-	background: rgba($color: #ffffff, $alpha: 0.7);
-	background-blend-mode: multiply;
+	background: rgba($color: #f46f73, $alpha: 0.9);
 	margin: 1rem;
+	box-shadow: 5px 5px 20px $transparent-black;
 	padding: 1rem;
-	border: 2px solid $midnight;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: flex-start;
+	h1 {
+		font-family: "Dancing Script", cursive;
+		font-size: 3rem;
+	}
 	.hr {
 		width: 100%;
 		color: $pale-spring-bud;
@@ -78,13 +37,13 @@
 		font-size: 1.2rem;
 		border-radius: 2rem;
 		cursor: pointer;
-		background-color: $light-orange;
+		background-color: #faba62;
 		border: 2px solid $midnight;
 		transition: 300ms;
 		&:hover {
-			background-color: $midnight;
-			border: 2px solid $light-orange;
-			color: $light-orange;
+			background-color: #413f5d;
+			border: 2px solid $pale-spring-bud;
+			color: $pale-spring-bud;
 		}
 		&:focus {
 			background-color: $pale-spring-bud;

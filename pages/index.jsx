@@ -18,10 +18,10 @@ export default function Home(props) {
 					<title>Feather Blogs</title>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<nav className={styles["nav-container"]}>
+				<nav className="nav-container">
 					<Link href={props.navbar.url.href}>
 						<Image
-							className={styles["nav-link"]}
+							className="nav-link"
 							src={props.navbar.logo.url}
 							height="100"
 							width="300"
@@ -29,7 +29,7 @@ export default function Home(props) {
 						/>
 					</Link>
 				</nav>
-				<div className={styles["container"]}>
+				<div className={styles["grid-container"]}>
 					{props.blogs.map((blog) => {
 						return (
 							<div key={blog.uid} className={styles["blog-card"]}>
@@ -48,20 +48,20 @@ export default function Home(props) {
 						);
 					})}
 				</div>
-				<footer className={styles["footer"]}>
+				<footer className="footer">
 					<Image
-						className={styles["avatarImage"]}
+						className="avatarImage"
 						src={props.footer.avatar_image.url}
 						height="150"
 						width="150"
 					/>
 					<h1>{props.footer.name}</h1>
-					<div className={styles["social-links"]}>
+					<div className="social-links">
 						{Object.keys(props.footer.social_links).map((link) => {
 							return (
 								<Link
 									key={props.footer.social_links[link].title}
-									className={styles["social-link"]}
+									className="social-link"
 									href={props.footer.social_links[link].href}
 								>
 									{props.footer.social_links[link].title}
