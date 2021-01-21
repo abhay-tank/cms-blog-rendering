@@ -1,8 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import queryStack from "../services/stack";
+import styles from "../styles/Blog.module.scss";
 export default function Blog(props) {
 	const blog = props.blog;
 	if (props.hasError) {
@@ -21,10 +21,10 @@ export default function Blog(props) {
 				<h1>{blog.blog_title}</h1>
 				<Image src={blog.blog_image.url} height="400" width="600" />
 				<p>{blog.blog_content}</p>
-				<div className="relatedLinks">
+				<div>
 					{blog.related_blogs.map((link) => {
 						return (
-							<Link href={`/${link.uid}`} className="relatedLink">
+							<Link key={link.blog_title} href={`/${link.uid}`}>
 								{link.blog_title}
 							</Link>
 						);
@@ -40,6 +40,7 @@ export const getStaticProps = async (context) => {
 		const blogData = await queryStack({
 			contentType: "abhay_blog",
 			entryId: context.params.id,
+			referenceId: "related_blogs",
 		});
 		const blog = await blogData.toJSON();
 		return {

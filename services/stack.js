@@ -5,20 +5,19 @@ const Stack = Contentstack.Stack(
 	process.env.CMS_DELIVERY_TOKEN,
 	process.env.CMS_ENVIRONMENT
 );
-const queryStack = async ({ contentType, entryId }) => {
+const queryStack = async ({ contentType, entryId, referenceId }) => {
 	const content = Stack.ContentType(contentType);
 	try {
-		if (entryId) {
-			return await content
-				.Entry(entryId)
-				.includeReference("related_blogs")
-				.fetch();
+		if (entryId && referenceId && referenceId.length) {
+			return await content.Entry(entryId).includeReference(referenceId).fetch();
+		} else if (entryId) {
+			return await content.Entry(entryId).fetch();
 		} else {
 			return await content.Query().includeCount().toJSON().find();
 		}
 	} catch (error) {
 		console.error(error);
-		return error;
+		throw error;
 	}
 };
 export default queryStack;
