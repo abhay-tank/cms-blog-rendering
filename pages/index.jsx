@@ -69,6 +69,7 @@ export default function Home(props) {
 							);
 						})}
 					</div>
+					<p>© 2021 Abhay Tank. All rights given.</p>
 				</footer>
 			</div>
 		);

@@ -71,6 +71,7 @@ export default function Blog(props) {
 							);
 						})}
 					</div>
+					<p>© 2021 Abhay Tank. All rights given.</p>
 				</footer>
 			</div>
 		);
